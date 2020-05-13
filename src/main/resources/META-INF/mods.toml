@@ -1,0 +1,18 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+modId="brewteamlib"
+version="${file.jarVersion}"
+displayName="Brew Team Mod Library" #mandatory
+credits="Thanks for this example mod goes to Java" #optional
+authors="Love, Cheese and small house plants" #optional
+description='''
+Something Borrowed and Somthing Blue
+'''
+[[dependencies.rfllib]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31.1.14,)"
+    ordering="NONE"
+    side="BOTH"
