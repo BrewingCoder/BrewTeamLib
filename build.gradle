@@ -1,11 +1,11 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://maven.minecraftforge.net' }
         jcenter()
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
@@ -130,13 +130,9 @@ publishing {
             artifact apiJar
         }
     }
-    repositories {
+     repositories {
         maven {
-            credentials {
-                username project.hasProperty('maven_username') ? project.property('maven_username') : ''
-                password project.hasProperty('maven_password') ? project.property('maven_password') : ''
-            }
-            url "https://maven.gscottsingleton.com/repository/mcrfl/"
+            url "file:///${project.projectDir}/mcmodsrepo"
         }
     }
 }
